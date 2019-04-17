@@ -1,0 +1,8 @@
+$ docker run -it --name curlbuntu ubuntu:latest
+
+# apt update
+# apt install curl
+
+C^P C^Q
+
+$ docker exec -it curlbuntu sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
