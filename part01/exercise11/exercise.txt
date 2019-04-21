@@ -1,0 +1,2 @@
+$ docker build -t back-end-docker .
+$ docker run -p 8000:8000 -v $(pwd)/logs.txt:/mydir/backend-example-docker/logs.txt --name back-end back-end-docker

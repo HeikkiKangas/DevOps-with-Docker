@@ -1,0 +1,4 @@
+exercise12/front$ docker build -t front .
+exercise12/back$ docker build -t back .
+$ docker run -d -p 5000:5000 --name front-end front
+$ docker run -d -p 8000:8000 --name back-end back
