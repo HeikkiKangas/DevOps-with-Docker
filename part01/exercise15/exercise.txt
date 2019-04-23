@@ -1,0 +1,7 @@
+$ git clone https://github.com/HeikkiKangas/TicTacToe.git
+$ docker build -t heikkikangas/tictactoe .
+
+$ docker run -it heikkikangas/tictactoe
+
+$ docker login
+$ docker push heikkikangas/tictactoe
