@@ -1,0 +1,7 @@
+https://hub.docker.com/r/heikkikangas/my-env
+
+I installed the following packages:
+- Git
+- Python 3 for my own projects
+- JDK 8 for school projects
+- nodejs for FullStackOpen2019 course
