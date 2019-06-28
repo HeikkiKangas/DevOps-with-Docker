@@ -1,0 +1,33 @@
+version: '3.5'
+
+services:
+
+    backend:
+        image: kurkkumopo_back
+        restart: unless-stopped
+        ports:
+          - 5000:5000
+        volumes:
+          - model:/src/model
+        depends_on:
+          - training
+
+    frontend:
+        image: kurkkumopo_front
+        restart: unless-stopped
+        ports:
+          - 3000:3000
+        depends_on:
+          - backend
+
+    training:
+        image: kurkkumopo_training
+        volumes:
+          - model:/src/model
+          - images:/src/imgs
+          - data:/src/data
+
+volumes:
+  model:
+  images:
+  data:
