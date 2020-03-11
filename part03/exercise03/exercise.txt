@@ -1,0 +1,9 @@
+- Added user app
+- chown -R app /mydir
+- USER app
+
+exercise03/front$ docker build -t front_optimized .
+exercise03/back$ docker build -t back_optimized .
+
+$ docker run -d -p 5000:5000 --name front-end front_optimized
+$ docker run -d -p 8000:8000 --name back-end back_optimized

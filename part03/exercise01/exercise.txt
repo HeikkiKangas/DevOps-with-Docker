@@ -1,0 +1,17 @@
+exercise01/front$ docker build -t front .
+exercise01/back$ docker build -t back .
+
+Image sizes BEFORE optimization:
+front: 529MB
+back: 433MB
+
+exercise01/front$ docker build -t front_optimized .
+exercise01/back$ docker build -t back_optimized .
+
+Image sizes AFTER optimization:
+- Combined RUN commands & removed git, curl and apt sources.
+front: 428MB
+back: 332MB
+
+$ docker run -d -p 5000:5000 --name front-end front_optimized
+$ docker run -d -p 8000:8000 --name back-end back_optimized
